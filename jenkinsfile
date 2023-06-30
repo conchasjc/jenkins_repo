@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Back-end') {
       steps {
@@ -9,13 +9,10 @@ pipeline {
 
     stage('Front-end') {
       agent {
-        docker {
-          image 'node:16-alpine'
-        }
-
+         any
       }
       steps {
-        sh 'node --version'
+        sh 'java -version'
       }
     }
 

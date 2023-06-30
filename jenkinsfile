@@ -8,9 +8,8 @@ pipeline {
     }
 
     stage('Front-end') {
-      agent {
-         any
-      }
+      agent any
+      
       steps {
         sh 'java -version'
       }

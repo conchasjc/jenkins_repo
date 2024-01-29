@@ -1,13 +1,13 @@
 pipeline {
   agent any
   stages {
-    stage('Back-end') {
+    stage('Install Dependencies') {
       steps {
         sh 'echo "Hello this is backend"'
       }
     }
 
-    stage('Front-end') {
+    stage('Run Migrations') {
       agent any
       
       steps {
